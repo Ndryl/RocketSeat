@@ -122,8 +122,7 @@ footer a{
     margin: 4px auto;
 }
 .ligth #switch button{
-    right: 0;
-    left: initial;
+    animation: slide-in 0.4s forwards;
 }
 
 #switch button{
@@ -138,6 +137,8 @@ footer a{
     top: 50%;
     z-index: 1;
 
+    animation: slide-back 0.4s forwards;
+
 }
 #switch span{
     display: block;
@@ -146,6 +147,24 @@ footer a{
     background: var(--surface-color);
     border: 1px solid var(--stroke-color);
     border-radius: 9999px;
+
+}
+@keyframes slide-in{
+    from{
+        left: 0;
+    }
+    to{
+        left: 50%;
+    }
+
+}
+@keyframes slide-back{
+    from{
+        left: 50%;
+    }
+    to{
+        left: 0;
+    }
 
 }
 
